@@ -5,7 +5,7 @@ import AddCart from "./AddCart";
 
 export default async function Product({ searchParams }: SearchParamTypes) {
   return (
-    <div className="flex flex-col 2xl:floex-row items-center justify-between gap-24 p-12 text-gray-700">
+    <div className="flex flex-col lg:flex-row justify-between gap-24 p-12 text-gray-700">
       <Image
         src={searchParams.image}
         alt={searchParams.name}
@@ -22,7 +22,7 @@ export default async function Product({ searchParams }: SearchParamTypes) {
             {searchParams.unit_amount && formatPrice(searchParams.unit_amount)}
           </p>
         </div>
-        <AddCart {...searchParams}/>
+        <AddCart {...searchParams} />
         {/* <button className="my-12 text-white py-2 px-6 font-medium rounded-md bg-teal-700">
           Add to cart
         </button> */}
